@@ -1,5 +1,7 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column } from '@adonisjs/lucid/orm'
+import { BaseModel, column, manyToMany } from '@adonisjs/lucid/orm'
+import User from './user.js'
+import * as relations from '@adonisjs/lucid/types/relations'
 
 export default class Blog extends BaseModel {
   @column({ isPrimary: true })
